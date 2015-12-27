@@ -45,22 +45,33 @@ def sumy():
 
     # article = request.args.get('article')
     article = request.form['article']
-
-    print(article)
+    print('article:', article)
 
     # lang = request.args.get('language')
     lang = request.form['language']
+    print('lang:', lang)
+
     # sent_count = request.args.get('count')
     sent_count = request.form['count']
+    print('sent_count:', sent_count)
 
+
+    print('init a Stemmer')
     stemmer = Stemmer(lang)
+    print('Stemmer is ok')
+
 
     summarizer = Summarizer(stemmer)
+    print('summarizer is ready')
+
     summarizer.stop_words = get_stop_words(lang)
+    print('inject stop_words')
 
     parser = PlaintextParser.from_string(article, Tokenizer(lang))
+    print('PlaintextParser')
 
     sentences = [str(sentence) for sentence in summarizer(parser.document, sent_count)]
+    print('sentences:', sentences)
 
     return jsonify(sentences=sentences)
 
