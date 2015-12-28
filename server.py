@@ -52,11 +52,11 @@ def sumy():
     print('article:', article)
 
     # lang = request.args.get('language')
-    lang = request.form['language']
+    lang = request.form['language'].strip()
     print('lang:', lang)
 
     # sent_count = request.args.get('count')
-    sent_count = request.form['count']
+    sent_count = int(request.form['count'])
     print('sent_count:', sent_count)
 
 
