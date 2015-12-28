@@ -45,7 +45,7 @@ def fyi():
     # for i,sentence in enumerate(summarizer(parser.document, SENTENCES_COUNT)):
     #     html += '<p>' + str(sentence) + '</p>'
 
-    return render_template('index.tpl')
+    return render_template('index.tpl', title='Sumy')
 
 @app.route('/sumy', methods=['post'])
 def sumy():
