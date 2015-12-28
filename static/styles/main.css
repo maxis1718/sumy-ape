@@ -1,0 +1,75 @@
+html,
+body {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrap {
+    width: 90%;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+input, textarea {
+    outline: 0;
+}
+
+h1, h2, h3 {
+    color: #444;
+}
+
+#count, #lang {
+    padding: 3px 10px;
+    border: 0;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+#count:focus, #lang:focus {
+    border: 1px solid #ccc;
+}
+#lang {
+    text-transform: capitalize;
+}
+
+#article {
+    width: 100%;
+    min-height: 320px;
+    border: 1px solid #ddd;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 1.5em;
+    border-radius: 3px;
+    box-shadow: 0px -3px 4px -1px rgba(204, 204, 204, 0.3) inset;
+}
+
+#article:focus {
+    border: 1px solid #ccc;
+    box-shadow: 0px -3px 4px -1px rgba(204, 204, 204, 0.1) inset;
+}
+
+.sumy-wrap {
+    /*text-align: center;*/
+    margin: 24px 0;
+}
+#sumy-btn {
+    background-color: #b42d32;
+    color: #eee;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    height: 36px;
+    max-width: 320px;
+}
+
+#results {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #eee;
+    margin: 0 0 10px;
+    line-height: 1.5em;
+    font-size: 1.1em;
+    text-align: justify;
+}
