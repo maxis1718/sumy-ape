@@ -5,6 +5,9 @@ body {
     padding: 0;
     font-family: 'Open Sans', sans-serif;
 }
+.op-0 {
+    opacity: 0;
+}
 
 .wrap {
     width: 90%;
@@ -50,19 +53,6 @@ h1, h2, h3 {
     border: 1px solid #ccc;
 }
 
-.sumy-wrap {
-    /*text-align: center;*/
-    margin: 24px 0;
-}
-#sumy-btn {
-    background-color: #b42d32;
-    color: #eee;
-    border: 0;
-    outline: 0;
-    width: 100%;
-    height: 36px;
-    max-width: 320px;
-}
 
 #results {
     margin-top: 24px;
@@ -72,4 +62,75 @@ h1, h2, h3 {
     line-height: 1.5em;
     font-size: 1.1em;
     text-align: justify;
+}
+
+.sumy-wrap {
+    /*text-align: center;*/
+    margin: 24px 0;
+    background-color: #b42d32;
+    color: #eee;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+#sumy-btn {
+    border: 0;
+    outline: 0;
+    width: 96px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.spinner {
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  transition: opacity .2s ease;
+}
+
+.spinner > div {
+  background-color: #eee;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
 }
