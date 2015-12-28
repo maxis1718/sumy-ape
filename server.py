@@ -64,8 +64,9 @@ def sumy():
     summarizer = Summarizer(stemmer)
     print('summarizer is ready')
 
-    summarizer.stop_words = get_stop_words(lang)
-    print('inject stop_words')
+    # summarizer.stop_words = get_stop_words(lang)
+    # print('inject stop_words')
+    print('ignore stop_words')
 
     parser = PlaintextParser.from_string(article, Tokenizer(lang))
     print('PlaintextParser')
